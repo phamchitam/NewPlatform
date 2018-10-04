@@ -9,11 +9,12 @@ import tkt.cmu.vn.dto.UserDTO;
 @Controller(value="homeControllerofWeb")
 public class HomeController {
     @RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
-    public ModelAndView home(){
-        ModelAndView mav = new ModelAndView("web/home");
-        UserDTO userDTO = new UserDTO();
-        userDTO.setName("Khoa hoc Java Spring thang 09 nam 2018");
-        mav.addObject("model",userDTO);
-        return mav;
+    public String home(){
+        return "/web/home";
+    }
+
+    @RequestMapping(value = "/dang-nhap")
+    public String login(){
+        return "login";
     }
 }
