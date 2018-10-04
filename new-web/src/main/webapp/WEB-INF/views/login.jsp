@@ -15,7 +15,7 @@
 <form name='loginForm' action="/j_spring_security_check" method='POST'>
 
 
-    User: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type='text' id = 'username' name='j_username' />
+    User: &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  <input type='text' id = 'username' name='j_username' />
     <br/>
     Password:&nbsp; &nbsp;  <input type='password' id = 'password' name='j_password' />
     <br/>
