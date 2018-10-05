@@ -12,12 +12,9 @@
 
 </head>
 <body>
-<br/>
-<br/>
-<br/>
 <form name='loginForm' action="/j_spring_security_check" method='POST'>
 
-    <br/>
+    <br/> <h1 class = "white">Incorrect Account. Please try again !</h1>
     <br/>
     <br/>
     <span class= "white" > User: </span> &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  <input type='text' id = 'username' name='j_username' />

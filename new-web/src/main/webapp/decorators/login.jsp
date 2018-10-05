@@ -24,9 +24,9 @@
                         <h1>
                             <i class="ace-icon fa fa-leaf green"></i>
                             <span class="red">SPRING ONLINE</span>
-                            <span class="white" id="id-text2">KHÓA THÁNG 8</span>
+                            <span class="white" id="id-text2">KHÓA THÁNG 9</span>
                         </h1>
-                        <h4 class="blue" id="id-company-text">&copy;THÁNG 8 TEAM</h4>
+                        <h4 class="blue" id="id-company-text">&copy;THÁNG 9 TEAM</h4>
                     </div>
                     <div class="space-6"></div>
 
