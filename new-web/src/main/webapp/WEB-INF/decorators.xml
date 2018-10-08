@@ -4,6 +4,8 @@
     <excludes>
         <pattern>/404-page.html</pattern>
         <pattern>/ajax*</pattern>
+        <pattern>/index.jsp</pattern>
+        <pattern>/dang-nhap</pattern>
         <pattern>/access-denied</pattern>
         <pattern>/ckfinder*</pattern>
         <pattern>/api*</pattern>
@@ -18,8 +20,6 @@
         <pattern>/*</pattern>
     </decorator>
 
-    <decorator name="login" page="login.jsp">
-        <pattern>/dang-nhap</pattern>
-    </decorator>
+
 
 </decorators>
