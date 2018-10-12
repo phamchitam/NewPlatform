@@ -1,13 +1,15 @@
 package tkt.cmu.vn.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class UserEntity {
+public class UserEntity implements Serializable {
 
+    private static final long serialVersionUID = 2203094022202260996L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

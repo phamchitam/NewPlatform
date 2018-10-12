@@ -5,7 +5,7 @@ import java.util.List;
 
 
 
-public class UserDTO {
+public class UserDTO extends AbstractDTO {
 
     private String userName;
     private String password;

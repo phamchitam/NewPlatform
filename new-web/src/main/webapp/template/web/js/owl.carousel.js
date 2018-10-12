@@ -10,9 +10,8 @@
 
 if ( typeof Object.create !== "function" ) {
 	Object.create = function( obj ) {
-        function F() {
-        }
-        F.prototype = obj;
+		function F() {};
+		F.prototype = obj;
 		return new F();
 	};
 }
@@ -110,7 +109,7 @@ if ( typeof Object.create !== "function" ) {
 			}
 			base.play();
 
-			base.$elem.find(".owl-wrapper").css("display","block");
+			base.$elem.find(".owl-wrapper").css("display","block")
 
 			if(!base.$elem.is(":visible")){
 				base.watchVisibility();
@@ -283,7 +282,7 @@ if ( typeof Object.create !== "function" ) {
 						base.updateVars();
 					},base.options.responsiveRefreshRate);
 				}
-			};
+			}
 			$(window).resize(base.resizer)
 		},
 
@@ -347,7 +346,7 @@ if ( typeof Object.create !== "function" ) {
 			var maximum = ((base.itemsAmount * base.itemWidth) - base.options.items * base.itemWidth) * -1;
 			if(base.options.items > base.itemsAmount){
 				base.maximumItem = 0;
-				maximum = 0;
+				maximum = 0
 				base.maximumPixels = 0;
 			} else {
 				base.maximumItem = base.itemsAmount - base.options.items;
@@ -398,7 +397,7 @@ if ( typeof Object.create !== "function" ) {
 
 		buildButtons : function(){
 			var base = this;
-			var buttonsWrapper = $("<div class=\"owl-buttons\"/>");
+			var buttonsWrapper = $("<div class=\"owl-buttons\"/>")
 			base.owlControls.append(buttonsWrapper);
 
 			base.buttonPrev = $("<div/>",{
@@ -417,7 +416,7 @@ if ( typeof Object.create !== "function" ) {
 
 			buttonsWrapper.on("touchstart.owlControls mousedown.owlControls", "div[class^=\"owl\"]", function(event){
 				event.preventDefault();
-			});
+			})
 
 			buttonsWrapper.on("touchend.owlControls mouseup.owlControls", "div[class^=\"owl\"]", function(event){
 				event.preventDefault();
@@ -597,7 +596,7 @@ if ( typeof Object.create !== "function" ) {
 
 			base.currentItem = base.owl.currentItem = position;
 			if( base.options.transitionStyle !== false && drag !== "drag" && base.options.items === 1 && base.browser.support3d === true){
-				base.swapSpeed(0);
+				base.swapSpeed(0)
 				if(base.browser.support3d === true){
 					base.transition3d(base.positionsInArray[position]);
 				} else {
@@ -655,7 +654,7 @@ if ( typeof Object.create !== "function" ) {
 			else if( position <= 0 ){
 				position = 0;
 			}
-			base.swapSpeed(0);
+			base.swapSpeed(0)
 			if(base.browser.support3d === true){
 				base.transition3d(base.positionsInArray[position]);
 			} else {
@@ -670,7 +669,7 @@ if ( typeof Object.create !== "function" ) {
 
 			base.prevArr.push(base.currentItem);
 			base.prevItem = base.owl.prevItem = base.prevArr[base.prevArr.length -2];
-			base.prevArr.shift(0);
+			base.prevArr.shift(0)
 
 			if(base.prevItem !== base.currentItem){
 				base.checkPagination();
@@ -860,7 +859,7 @@ if ( typeof Object.create !== "function" ) {
 				sliding : null,
 				dargging: null,
 				targetElement : null
-			};
+			}
 
 			base.isCssFinish = true;
 
@@ -959,10 +958,10 @@ if ( typeof Object.create !== "function" ) {
 
 				var minSwipe = function(){
 					return  base.newRelativeX / 5;
-				};
+				}
 				var maxSwipe = function(){
 					return  base.maximumPixels + base.newRelativeX / 5;
-				};
+				}
 
 				base.newPosX = Math.max(Math.min( base.newPosX, minSwipe() ), maxSwipe() );
 				if(base.browser.support3d === true){
@@ -1055,10 +1054,10 @@ if ( typeof Object.create !== "function" ) {
 			var base = this,
 				direction;
 			if(base.newRelativeX < 0 ){
-				direction = "right";
+				direction = "right"
 				base.playDirection = "next"
 			} else {
-				direction = "left";
+				direction = "left"
 				base.playDirection = "prev"
 			}
 			return direction

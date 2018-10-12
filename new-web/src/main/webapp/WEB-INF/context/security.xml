@@ -15,7 +15,7 @@
                      password-parameter="j_password"
                      login-processing-url="/j_spring_security_check"
                      authentication-success-handler-ref="customSuccessHandler"
-                     authentication-failure-url="/dang-nhap?incorrectAccount"/>
+                     authentication-failure-url="/dang-nhap"/>
 
         <access-denied-handler error-page="/access-denied" />
         <logout delete-cookies="JSESSIONID"/>

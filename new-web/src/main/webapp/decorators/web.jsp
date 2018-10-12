@@ -17,7 +17,6 @@
 
     <link rel="stylesheet" href="<c:url value='/template/admin/assets/css/bootstrap.min.css' />" />
 
-    <script src="<c:url value="/template/web/js/paging/jquery.twbsPagination.js"/>" type="text/javascript"></script>
 </head>
 <body>
 <div class="wrap">

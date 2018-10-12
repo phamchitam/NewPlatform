@@ -1,9 +1,7 @@
 package tkt.cmu.vn.dto;
 
-
-
-public class RoleDTO extends AbstractDTO {
-    private static final long serialVersionUID = 5000233675425114294L;
+public class CategoryDTO extends AbstractDTO {
+    private static final long serialVersionUID = 1176684400332617620L;
     private String name;
     private String code;
 
@@ -22,5 +20,4 @@ public class RoleDTO extends AbstractDTO {
     public void setCode(String code) {
         this.code = code;
     }
-
 }

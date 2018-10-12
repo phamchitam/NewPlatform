@@ -109,7 +109,7 @@ $.ui.accordion.prototype = {
 		$.removeData(this.element, "ui-accordion");
 		$(this.element).removeClass("ui-accordion").unbind(".ui-accordion");
 	}
-};
+}
 
 function scopeCallback(callback, scope) {
 	return function() {
@@ -198,7 +198,7 @@ function clickHandler(event) {
 	// get the click target
 	var clicked = $(event.target);
 	
-	// due to the event delegation dto, we have to check if one
+	// due to the event delegation model, we have to check if one
 	// of the parent elements is our actual header, and find that
 	if ( clicked.parents(options.header).length )
 		while ( !clicked.is(options.header) )
@@ -236,8 +236,9 @@ function clickHandler(event) {
 	toggle.call(this, toShow, toHide, data, clickedActive, down );
 
 	return false;
-}
-    function findActive(headers, selector) {
+};
+
+function findActive(headers, selector) {
 	return selector != undefined
 		? typeof selector == "number"
 			? headers.filter(":eq(" + selector + ")")
