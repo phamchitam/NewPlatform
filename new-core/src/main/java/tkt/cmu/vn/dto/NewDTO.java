@@ -1,6 +1,6 @@
 package tkt.cmu.vn.dto;
 
-public class NewDTO extends AbstractDTO {
+public class NewDTO extends AbstractDTO<NewDTO> {
 
     private static final long serialVersionUID = -4814087466778053355L;
     private String title;

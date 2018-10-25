@@ -68,31 +68,26 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
-                                            <th>Firstname</th>
-                                            <th>Lastname</th>
-                                            <th>Email</th>
+                                            <th>Tên bài viết</th>
+                                            <th>Thao tác</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mary</td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>July</td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
+                                        <c:forEach var="item" items="${model.listResult}">
+                                            <tr>
+                                                <td>${item.title}</td>
+                                                <td>[các nút thao tác]</td>
+
+                                            </tr>
+
+                                        </c:forEach>
+
+
+
                                         </tbody>
                                     </table>
-                                    <ul id="pagination-demo" class="pagination">
-                                    </ul>
+
+                                    <ul id="pagination-demo" class="pagination"> </ul>                                    </ul>
                                     <input type="hidden" name="page" id="page"/>
                                 </div>
                             </div>
@@ -115,11 +110,14 @@
             totalPages: totalPages,
             visiblePages: visiblePages,
             startPage: startPage,
+
+
             onPageClick: function (event, page) {
                 if (page != startPage) {
                     $('#page').val(page);
                     $('#formSubmit').submit();
                 }
+                console.log("Page: " + page);
             }
         });
     });

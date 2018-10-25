@@ -3,7 +3,7 @@ package tkt.cmu.vn.entity;
 import javax.persistence.*;
 
 
-@Entity
+@Entity(name="new")
 public class NewEntity extends BaseEntity {
     private static final long serialVersionUID = 7119551799584345881L;
 
